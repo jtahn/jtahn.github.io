@@ -1,0 +1,73 @@
+// styles for general structures/elements
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-kerning: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+      background-color: $bg-color;
+    color: $font-color;
+  }
+  
+
+body {
+    margin: 0 auto; 
+    width: $content-width;
+} 
+
+p, li {
+    line-height: 150%;
+    text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {margin-top: $base-font-size}
+
+
+
+/////////
+// lists: unordered, definition/description
+///////////
+ul {padding-left: 1em;}
+// ul {list-style: none;}
+
+dt {font-weight: bold;}
+dd {padding-left: 1em;}
+
+
+///////////////////////////////////
+//@ordered lists (so they look like the wikipedia style, with 1.1, 1.2, 1.3 etc)
+///////////////////////////////////
+// see https://stackoverflow.com/a/26245056
+
+// style the numbers; see https://css-tricks.com/custom-list-number-styling/
+// ol li::before {content: "0" counter(my-awesome-counter);}
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    margin: 0;
+    padding: 0;
+}
+  
+ol > li {
+    display: table;
+    counter-increment: my-awesome-counter;
+}
+
+ol > li:before {
+    content: counters(my-awesome-counter, ".") " ";
+    //   content: "0" counters(my-awesome-counter, ".0") " ";
+    display: table-cell;
+    padding-right: 0.6em;    
+}
+
+li ol > li {
+    margin: 0;
+}
+
+li ol > li:before {
+    content: counters(my-awesome-counter, ".") " ";
+}

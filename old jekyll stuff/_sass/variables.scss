@@ -1,0 +1,56 @@
+$content-width: 700px;
+$codeblock-width: $content-width;
+$base-font-size: 18px;
+$shadow-width: 0.4em;
+$shadow-color: #000000;
+$blockquote-color: lighten(hsl(200, 40, 10), 40%);
+
+// themes
+$chobani: (
+    primary: #1A3C34,
+    secondary: #6C4F3D,
+    highlight: #D2C29D,
+    neutral: #F4F3F0
+);
+
+$owltastic: (
+    primary: #214261, 
+    secondary: #dbbd7f, // FIND SOMETHING ELSE
+    highlight: #dbbd7f, 
+    neutral: #faf7eb
+);
+
+$lynn: (
+    primary: #000000,
+    secondary: #FF6F61,
+    highlight: #FAE03C, 
+    neutral: #FFFFFF
+);
+
+// palette
+$theme: $lynn;
+$font-color: map-get($theme, primary);
+$highlight-color: map-get($theme, highlight);
+$bg-color: map-get($theme, neutral);
+$contrast-color: map-get($theme, secondary);
+
+$monospace-primary-color: #766F57;
+$monospace-secondary-color: #0F4C81;
+$codeblock-font-color: #FFFFFF;
+$codeblock-lineno-color: #FFFFFF;
+$codeblock-bg-color: #2B2B2B;
+
+
+
+
+// fonts
+$monospace: 'Space Mono', monospace;
+$main-font: 'IBM Plex Serif', serif;
+$alt-font: 'Zilla Slab', serif;
+
+
+
+// where do i use these?
+$body-border-radius: 0.2em;
+$body-shadow-width: $shadow-width*2;
+$page-color: #FFFFFF;

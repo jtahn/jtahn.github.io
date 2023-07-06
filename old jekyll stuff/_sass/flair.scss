@@ -1,0 +1,22 @@
+// more artistic elements, like the gradient (this is a stretch)
+
+
+$green1: (start: #869D98, end: #456B63);
+$red1: (start: #D4145A, end: #FBB03B);
+$purple1: (start: #662D8C, end: #ED1E79);
+$purple2: (start: #8E78FF, end: #FC7D7B);
+
+
+$theme: $purple2;
+
+hr {border: none; height: 5px;  margin: 15px 0 10px;
+    background: linear-gradient(to right, 
+    map-get($theme, start), 
+    map-get($theme, end));}
+
+    // content:"";
+	// display: block;
+	// width: $content-width;
+	/* to move the gradient a little lower */
+	// position: relative; 
+	// top: .25em;

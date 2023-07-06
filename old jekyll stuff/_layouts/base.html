@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>{{ page.title }}</title>
+    {% include fonts.html %}
+    {% include assets.html %}
+    {% include math.html %}
+    {% include show-hide.html %} 
+    {% if jekyll.environment == 'production' %}
+    <!-- Github Pages will automatically set jekyll.environment == 'production' -->
+    {% include analytics.html %}
+    {% endif %}
+  </head>
+  <body>
+    <div class='content'>
+    <header>
+      {% include navigation.html %}
+    </header>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+
+    <footer>
+     
+
+        <!-- <div class='signature'>even a blind squirrel gets a nut every once in a while</div> -->
+        <!-- <div class='signature'>what one fool can do, another can</div> -->
+<!--         <div class='signature'>stumbling is not falling</div> -->
+      <!-- <div class='signature'>a mathematician is a machine for turning coffee <i>and wpc80</i> into theorems</div> -->
+       <!-- <div class='signature'>"a mathematician is a machine for turning coffee into theorems"</div>  -->
+       <!-- <div class="signature"><a href="https://www.youtube.com/watch?v=JzAcXg1uz0Y">songbird of our generation</a></div> -->
+        <!-- 
+        That's not a chip on my shoulder, that's your foot on my neck.
+        they cripple the bird's wing, and then they condemn it for not flying as fast as they
+        You can always chase a dream but it will not count if you never catch it.
+        Some things are better done than said. -->
+
+        <!-- <div class='copyright'>John Ahn</div> -->
+      </div>
+    </footer>
+  </div>
+  </body>
+</html>

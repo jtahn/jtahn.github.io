@@ -1,0 +1,14 @@
+---
+layout: base
+---
+
+<!-- https://jekyllrb.com/docs/posts/#categories-and-tags -->
+{% for category in site.categories %}
+  {% if category[0] == page.title %}
+  <ul class = 'toc'>
+    {% for post in category[1] %}
+      {% include toc-entry.html %} 
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endfor %}

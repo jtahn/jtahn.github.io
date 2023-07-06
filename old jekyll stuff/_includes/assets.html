@@ -1,0 +1,2 @@
+{% for item in site.data.assets %}
+<link rel="{{ item.rel }}" href="{{ item.link | prepend: site.baseurl }}">{% endfor %}

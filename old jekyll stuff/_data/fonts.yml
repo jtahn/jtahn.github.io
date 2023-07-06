@@ -1,0 +1,13 @@
+# fonts
+- name: text (sans/serif)
+  rel: stylesheet
+  link: https://fonts.googleapis.com/css?family=IBM+Plex+Serif
+- name: headings (serif)
+  rel: stylesheet
+  link: https://fonts.googleapis.com/css?family=Zilla+Slab
+- name: date (fixed-width)
+  rel: stylesheet
+  link: https://fonts.googleapis.com/css?family=Space+Mono
+# - name: adobe (assorted)
+#   rel: stylesheet
+#   link: https://use.typekit.net/ros1qlt.css

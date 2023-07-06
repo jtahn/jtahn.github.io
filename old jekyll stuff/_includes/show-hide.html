@@ -1,0 +1,17 @@
+<!-- show/hide post summary when i click the date-->
+<!-- https://isabelcastillo.com/toggle-showhide-multiple-elements-with-pure-javascript -->
+<script>
+    function toggleDocs(event) {
+        if (event.target && event.target.id == 'show-hide') {
+            var next = event.target.closest('li').nextElementSibling;
+            if (next.style.display == "none") {
+                next.style.display = "flex";
+    
+            } else {
+                next.style.display = "none";
+            }
+        }
+        }
+  
+    document.addEventListener('click', toggleDocs, true);
+  </script>

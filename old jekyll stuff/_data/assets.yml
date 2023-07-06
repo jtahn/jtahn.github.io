@@ -1,0 +1,9 @@
+# favicon
+- name: favicon
+  rel: shortcut icon
+  link: /assets/site/favicons/cheese.ico
+
+# stylesheet
+- name: styles
+  rel: stylesheet
+  link: /assets/site/css/styles.css

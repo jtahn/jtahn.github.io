@@ -1,0 +1,12 @@
+- name: toc
+  link: /
+# - name: edu
+#   link: /edu/
+# - name: notes
+#   link: /notes/
+# - name: tangents
+#   link: /tangents/
+# - name: log
+#   link: /log/
+- name: about
+  link: /about/

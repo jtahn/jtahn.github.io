@@ -1,0 +1,36 @@
+<li class='entry'> 
+  <a href="{{ post.url }}" class='date' >{{ post.date | date_to_string | downcase }}</a>   <!-- https://jekyllrb.com/docs/liquid/filters/ -->
+  &nbsp;&xmap;&nbsp;
+  <span class='title' id='show-hide'>{{ post.title }}</span>
+  <span class='filler'></span>
+  <span class='tags'>
+    {% for tag in post.tags %}
+    &nbsp;&nbsp;
+    <a class='tag'>&#35;{{ tag }}</a>
+    {% endfor %}
+  </span>
+</li>
+
+
+<!-- post preview that can toggled -->
+<!-- https://jekyllrb.com/docs/posts/#post-excerpts -->
+<li class='entry' style="display:none">
+  <span style="visibility: hidden;" class='date'>00 aaa 0000</span> 
+
+  <!-- <span style="visibility: hidden;" >&nbsp;&xmap;&nbsp;</span> -->
+  <!-- <span>&nbsp;&nbsp;&rdsh;&nbsp;</span> -->
+  <!-- <span>&rdsh;&nbsp;</span> -->
+  <!-- <span style="white-space:nowrap;">&emsp;&emsp;&rdsh;&nbsp;</span> -->
+  <span style="white-space:nowrap;">&emsp;&emsp;&rarrhk;&nbsp;</span>
+  <!-- <span>&rarrhk;&nbsp;</span> -->
+  <!-- <span>&xrarr;&nbsp;</span> -->
+  
+  <div id='post-preview'>{{ post.excerpt }}</div> 
+  <!-- <div id='post-preview'>{{ post.summary }}</div>  -->
+  <!-- <a href="{{ post.url }}" style="float: right;">&gt;&gt;</a> -->
+
+  <span style="visibility: hidden;" class='tags'>asdf</span>
+  <!-- <span style="visibility: hidden;" class='tags'>{% for tag in post.tags %}&nbsp;&nbsp;<a class='tag'>&#35;{{ tag }}</a>{% endfor %}</span> -->
+</li>
+
+

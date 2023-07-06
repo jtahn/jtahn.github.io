@@ -1,0 +1,99 @@
+// font colors, sizing, highlighting
+
+
+// @Font Families
+p, ol, ul, dl {font-family: $main-font;}
+blockquote, blockquote *, h1,h2,h3,h4,h5,h6 {font-family: $alt-font;}
+ol li::before, #markdown-toc::before, #markdown-toc * {font-family: $alt-font;}
+.signature, .copyright, .cat-nav, .tag, .title {font-family: $alt-font;}
+.date {font-family: $monospace;}
+
+// @Font Colors
+code {color: white}
+
+.copyright {color: $monospace-primary-color;}
+.signature{  color: $contrast-color;}
+
+.date {color: $monospace-primary-color;}
+.title {color: $font-color;}
+.title:hover  {color: $bg-color;}
+.tag:hover {color: $bg-color;}
+
+#markdown-toc {color: $codeblock-font-color;}
+#markdown-toc * {color: $codeblock-font-color;}
+
+// @Font Sizes
+body {  font-size: $base-font-size;}
+.date {font-size: 85%;}
+.tag, .title, .cat-nav {font-size: 105%;}
+.signature, .copyright {font-size: 70%;}
+#post-preview {font-size: 80%;}
+
+// @Highlight Colors (simple highlighting)
+.title {background: none;}
+.title:hover  {background: $font-color;}
+#markdown-toc {background-color: $codeblock-bg-color;}
+#markdown-toc * {background-color: $codeblock-bg-color;}
+// #show-hide:hover {color: $monospace-secondary-color;}
+// .date {background: none;}
+
+
+// @Link Highlighting (complicated highlighting)
+a {background: linear-gradient(to top, 
+    $highlight-color 0%, $highlight-color 35%, 
+    transparent 35%, transparent 100%);}
+
+a:hover, .current {background: linear-gradient(to top, 
+    $highlight-color 0%, $highlight-color 95%, 
+    transparent 95%, transparent 100%);}
+
+// this selector doesn't let you edit the background
+// a:visited {}
+
+// .date will have same color underline as links (bc dates are links), but  (same thickness as .tag)
+// also i think this looks better; more balanced...bc on both sides of title, you now have underlined things
+.date {background:linear-gradient(to top, 
+    transparent 0%, transparent 10%, 
+    $highlight-color 10%, $highlight-color 25%, 
+    transparent 25%, transparent 100%);}
+
+.date:hover {background: linear-gradient(to top, 
+    transparent 0%, transparent 10%, 
+    $highlight-color 10%, $highlight-color 90%, 
+    transparent 90%, transparent 100%);}
+
+.tag {background:linear-gradient(to top, 
+    transparent 0%, transparent 10%, 
+    $contrast-color 10%, $contrast-color 25%, 
+    transparent 25%, transparent 100%);}
+
+.tag:hover {background: linear-gradient(to top, 
+    transparent 0%, transparent 10%, 
+    $contrast-color 10%, $contrast-color 90%, 
+    transparent 90%, transparent 100%);}
+  
+#markdown-toc a {background:linear-gradient(to top, 
+    transparent 0%, transparent 5%, 
+    $contrast-color 5%, $contrast-color 15%, 
+    transparent 15%, transparent 100%);}
+
+#markdown-toc a:hover {background: linear-gradient(to top, 
+    transparent 0%, transparent 5%, 
+    $contrast-color 5%, $contrast-color 95%, 
+    transparent 95%, transparent 100%);}
+
+// text-shadow: so hl won't cover descenders 
+a {text-shadow: 1px 0px $bg-color, -1px 0px $bg-color;} 
+#markdown-toc a {text-shadow: 
+    1px 0px $codeblock-bg-color,
+    -1px 0px $codeblock-bg-color;}
+.current, a:hover, .tag:hover, #markdown-toc a:hover {
+    text-shadow: none;}
+
+
+
+// @Extra
+a {text-decoration: none;} /* remove blue underline */
+a {padding-bottom: 1px;} /* padding: so that descenders don't kiss bottom of the highlight */
+
+#show-hide {cursor:pointer;}

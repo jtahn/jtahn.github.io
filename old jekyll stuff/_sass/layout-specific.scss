@@ -1,0 +1,69 @@
+///////////////////////////////////
+// @GENERAL
+///////////////////////////////////
+
+blockquote {margin: $base-font-size; padding-left: $base-font-size;}
+blockquote {border-left: 5px solid $blockquote-color;}
+blockquote p {text-align: justify;}
+
+///////////////////////////////////
+// @HEADER and @FOOTER stuff
+///////////////////////////////////
+header, footer {
+  margin: $base-font-size auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signature, .copyright {text-align: center;}
+
+///////////////////////////////////
+// @TOC stuff for TOC pages
+///////////////////////////////////
+
+.toc {
+  // margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.2em;
+  padding: 0; // because general ul has padding-left: 1em
+}
+
+// .entry {line-height: 1.5em;} 
+.entry {display: flex; justify-content: space-between;}
+.tags {display: flex; justify-content: flex-end; white-space: nowrap;}
+.date{white-space: nowrap;}
+#post-preview {
+  // line-height: 75%; // this doesn't seem to do anything
+  flex-grow: 1;
+} 
+
+///////////////////////////////////
+// @TOC stuff for top of posts
+///////////////////////////////////
+
+#markdown-toc::before {content: "table of contents";}
+
+#markdown-toc {
+  padding: $shadow-width $shadow-width*1.5 $shadow-width*1.5 $shadow-width*1.5;
+  margin: 10px 100% 10px 0;
+  // the following are same as syntax.scss
+  width: $codeblock-width*.50;
+  border-radius: 0.2em;
+  -moz-box-shadow:    inset 0 0 $shadow-width $shadow-color;
+  -webkit-box-shadow: inset 0 0 $shadow-width $shadow-color;
+  box-shadow:         inset 0 0 $shadow-width $shadow-color;
+}
+
+///////////////////////////////////
+// @HACKS
+///////////////////////////////////
+.filler {flex-grow: 1;}
+.the-end {text-align: right;}
